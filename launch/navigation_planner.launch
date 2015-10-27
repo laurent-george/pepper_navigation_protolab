@@ -1,0 +1,6 @@
+
+<launch>
+  <!-- Run AMCL -->
+  <arg name="robot_ip" default="127.0.0.1"/>
+  <node pkg="pepper_navigation_naoqi" type=anavigation_naoqi_interface.py" args="--qi-url tcp://$(arg robot_ip)" respawn="false" />
+</launch>

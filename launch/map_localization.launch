@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- Set the name of the map yaml file: can be overridden on the command line. -->
+  <arg name="map" default="$(find pepper_navigation_protolab)/map_example/appart_alex_greyed.yaml" />
+
+  <!-- Run the map server with the desired map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+  <include file="$(find pepper_navigation_protolab)/launch/amcl_laser.launch"/>
+
+</launch>

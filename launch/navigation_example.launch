@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find naoqi_driver)/launch/naoqi_driver.launch">
+    <arg name="network_interface" value="wlan0" />
+</include>
+    <include file="$(find pepper_navigation_protolab)/amcl_laser.launch" />
+    <include file="$(find pepper_navigation_protolab)/map_server.launch" />
+</launch>
